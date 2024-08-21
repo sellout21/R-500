@@ -27,21 +27,27 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
-        input, select, button {
+        input, select, button, .link-button {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 4px;
             border: 1px solid #ccc;
-            box-sizing: border-box; /* Ensures padding is included in width */
+            box-sizing: border-box;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
         }
-        button {
+        button, .link-button {
             background-color: #007BFF;
             color: #fff;
             border: none;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
-        button:hover {
+        button:hover, .link-button:hover {
             background-color: #0056b3;
         }
         .result {
@@ -69,6 +75,8 @@
         <input type="number" id="customCropFactor" placeholder="Enter custom crop factor" step="0.1">
 
         <button onclick="calculateExposure()">Calculate Exposure Time</button>
+
+        <a href="request.html" class="link-button">Request a New Model</a>
 
         <div class="result" id="result"></div>
     </div>
